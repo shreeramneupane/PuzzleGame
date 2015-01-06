@@ -1,0 +1,38 @@
+.wrapper{
+  height: 510px;
+  width: 456px;
+  margin: 0 auto;
+  padding: 5px;
+  border:1px solid #333333;
+}
+.wrapper button, #score{
+  height: 44px;
+  padding: 0 50px;
+  display:block;
+  font-size: 24px;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 5px;
+  color: #FF0000;
+}
+#score{
+  cursor: default;
+}
+.box{
+  height: 100px;
+  width: 100px;
+  float: left;
+  font-size:30px;
+  background-color: #dddddd;
+  border: 2px solid #000000;
+  line-height: 100px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#empty{
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  cursor: default;
+}
