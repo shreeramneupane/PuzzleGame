@@ -24,8 +24,8 @@ $(document).ready(function(){
         score++;
         $("#score p").html("Movement Performed: "+score);
 
-        var winned = win(score);
-        if(winned == true){
+        var win = win(score);
+        if(win == true){
           $(".box").remove();
           $(".wrapper").css('background-color','red');
           $(".wrapper").append("<p>You complete game in "+score+" movement</p>");
@@ -64,24 +64,24 @@ $(document).ready(function(){
   }
 
   function win(score){
-    isWinned = true;
+    win = true;
     if(boxValue[0] == 0){
-      for(var i = 0; i<boxValue.length; i++){
+      for(var i = 0; i<boxValue.length-1; i++){
         if(i != boxValue[i]){
-          isWinned = false;
+          win = false;
           break;
         }
       }
     } else if(boxValue[0] == 1){
-      for(var i = 0; i<boxValue.length; i++){
+      for(var i = 0; i<boxValue.length-2; i++){
         if(boxValue[i] != i+1){
-          isWinned = false;
+          win = false;
           break;
         }
       }
     }else{
-      isWinned = false;
+      win = false;
     }
-    return isWinned;
+    return isWin;
   }
 });
